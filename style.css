@@ -1,0 +1,142 @@
+/* style.css */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:black;
+}
+
+/* LOGIN / REGISTER BOX */
+#loginPage, #registerPage{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:black;
+}
+
+.login-box{
+  background:#111;
+  padding:25px;
+  width:320px;
+  color:white;
+  text-align:center;
+  border:1px solid #d4af37;
+  border-radius:6px;
+}
+
+.login-logo{
+  width:80px;
+  margin-bottom:10px;
+}
+
+.login-box h2{
+  color:#d4af37;
+}
+
+.login-box input{
+  width:100%;
+  padding:8px;
+  margin:8px 0;
+}
+
+.login-box button{
+  width:100%;
+  padding:10px;
+  background:#d4af37;
+  border:none;
+  cursor:pointer;
+}
+
+/* HEADER */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:black;
+  padding:10px;
+  flex-wrap:wrap;
+}
+
+.site-logo{
+  width:40px;
+}
+
+.brand{
+  color:#d4af37;
+  font-size:22px;
+  font-weight:bold;
+}
+
+.header-right input{
+  padding:6px;
+  width:180px;
+}
+
+.header-right button{
+  margin-left:5px;
+  padding:6px 10px;
+  background:#d4af37;
+  border:none;
+  cursor:pointer;
+}
+
+/* PRODUCTS */
+#products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:15px;
+  padding:15px;
+}
+
+.product{
+  background:white;
+  padding:10px;
+  text-align:center;
+  border-radius:5px;
+}
+
+.product img{
+  width:100%;
+  height:150px;
+  object-fit:cover;
+}
+
+.product button{
+  margin-top:5px;
+  padding:5px 10px;
+}
+
+/* PAGES */
+.page{
+  display:none;
+  background:white;
+  margin:15px;
+  padding:20px;
+  border-radius:5px;
+}
+
+/* CART */
+.cart-item{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:8px;
+}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  .header-right{
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    gap:5px;
+  }
+  .header-right input{
+    width:100%;
+  }
+}
+

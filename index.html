@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TrendMart</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="https://tse2.mm.bing.net/th/id/OIP.A5qDxUZshVvAWMawfca59wHaHa?pid=Api&P=0&h=180">
+</head>
+<body>
+
+<!-- ===== REGISTRATION PAGE ===== -->
+<div id="registerPage">
+  <div class="login-box">
+    <img src="https://img.freepik.com/premium-vector/gold-tm-logo-black-background_853558-2654.jpg" class="login-logo">
+    <h2>Register on TrendMart</h2>
+    <input type="text" id="regName" placeholder="Full Name">
+    <input type="email" id="regEmail" placeholder="Email">
+    <input type="password" id="regPassword" placeholder="Password">
+    <input type="password" id="regConfirm" placeholder="Confirm Password">
+    <button onclick="register()">Register</button>
+    <p style="margin-top:10px; color:white;">
+      Already have an account? <span onclick="showLogin()" style="color:#d4af37; cursor:pointer;">Login</span>
+    </p>
+  </div>
+</div>
+
+<!-- ===== LOGIN PAGE ===== -->
+<div id="loginPage" style="display:none;">
+  <div class="login-box">
+    <img src="https://img.freepik.com/premium-vector/gold-tm-logo-black-background_853558-2654.jpg class="login-logo">
+    <h2>Login to TrendMart</h2>
+    <input type="text" id="email" placeholder="Email or Phone">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p style="margin-top:10px; color:white;">
+      Don't have an account? <span onclick="showRegister()" style="color:#d4af37; cursor:pointer;">Register</span>
+    </p>
+  </div>
+</div>
+
+<!-- ===== HOME PAGE ===== -->
+<div id="homePage" style="display:none;">
+<header>
+  <div class="header-left">
+    <img src="https://img.freepik.com/premium-vector/gold-tm-logo-black-background_853558-2654.jpg" class="site-logo">
+    <span class="brand">TrendMart</span>
+  </div>
+  <div class="header-right">
+    <input type="text" id="searchInput" placeholder="Search Products" onkeyup="searchProducts()">
+    <button onclick="showHome()">Home</button>
+    <button onclick="showAbout()">About</button>
+    <button onclick="showContact()">Contact</button>
+    <button onclick="showCart()">Cart (<span id="cartCount">0</span>)</button>
+    <button onclick="logout()">Logout</button>
+  </div>
+</header>
+
+<div id="products"></div>
+
+<!-- ABOUT -->
+<div id="aboutPage" class="page">
+  <h2>About TrendMart</h2>
+  <p>This is a learning e-commerce project using HTML, CSS & JavaScript.</p>
+</div>
+
+<!-- CONTACT -->
+<div id="contactPage" class="page">
+  <h2>Contact Us</h2>
+  <input placeholder="Name"><br><br>
+  <input placeholder="Email"><br><br>
+  <textarea placeholder="Message"></textarea><br><br>
+  <button>Send</button>
+</div>
+
+<!-- CART -->
+<div id="cartPage" class="page">
+  <h2>Your Cart</h2>
+  <div id="cartItems"></div>
+  <h3>Total Price: ₹<span id="totalPrice">0</span></h3>
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
